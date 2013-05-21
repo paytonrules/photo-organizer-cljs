@@ -1,3 +1,20 @@
-(ns photo-organizer)
+(ns photo-organizer
+  (:require [domina :as dom]
+            [domina.css :as css]
+            [goog.net.XhrIo :as xhr]
+            [domina.events :as ev]))
 
-(.write js/document "Hello, ClojureScript")
+(defn- receiver [event] 
+  (let [response (.-target event)]
+    (dom/append! (css/sel "#directories") (.getResponseText response))))
+
+;js/alert (.getResponseText response))))
+;    (dom/append! (dom/sel "#directories") (.getResponseText response))))
+
+
+;      (js/alert (.getResponseText response)))))
+
+(defn init []
+  (xhr/send "js/" receiver "GET"))
+
+(set! (.-onload js/window) init)

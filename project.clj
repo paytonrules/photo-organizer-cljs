@@ -2,7 +2,9 @@
   :description "My Single Page App Photo Organizer"
   :url "http://www.paytonrules.com"
   :source-paths ["src/clj"]
-  :dependencies [[org.clojure/clojure "1.5.1"]]
+  :dependencies [[org.clojure/clojure "1.5.1"]
+                 [org.clojure/google-closure-library-third-party "0.0-2029"]
+                 [domina "1.0.2-SNAPSHOT"]]
 
   :plugins [[lein-cljsbuild "0.3.0"]]
 
