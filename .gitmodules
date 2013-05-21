@@ -1,0 +1,3 @@
+[submodule "photo-organizer-sinatra"]
+	path = photo-organizer-sinatra
+	url = git@github.com:paytonrules/photo-organizer-sinatra.git
