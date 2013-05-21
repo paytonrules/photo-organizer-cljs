@@ -8,12 +8,6 @@
   (let [response (.-target event)]
     (dom/append! (css/sel "#directories") (.getResponseText response))))
 
-;js/alert (.getResponseText response))))
-;    (dom/append! (dom/sel "#directories") (.getResponseText response))))
-
-
-;      (js/alert (.getResponseText response)))))
-
 (defn init []
   (xhr/send "js/" receiver "GET"))
 
